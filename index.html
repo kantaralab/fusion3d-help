@@ -471,41 +471,6 @@
             border-radius: 8px;
         }
 
-        .light-demo {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 20px 0;
-        }
-
-        .light-box {
-            width: 100px;
-            height: 100px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        .light-box.light1 {
-            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-            box-shadow: -10px -10px 30px #fff, 10px 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .light-box.light2 {
-            background: linear-gradient(225deg, #fff 0%, #e8e8e8 100%);
-            box-shadow: 10px -10px 30px rgba(255,255,255,0.8), -10px 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .light-box.light3 {
-            background: linear-gradient(45deg, #fafafa 0%, #e0e0e0 100%);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
         @media (max-width: 768px) {
             .container {
                 padding: 40px 16px;
@@ -672,45 +637,8 @@
                 <strong>Quicksand</strong> — Modern, clean appearance</p>
             </div>
 
-            <h3>Understanding Lights</h3>
-            <p>The 3D text uses a <strong>three-point lighting system</strong> to create depth and dimension. This is similar to how photographers and filmmakers light their subjects:</p>
-
-            <div class="light-demo">
-                <div class="light-box light1">Light 1<br><small>Key Light</small></div>
-                <div class="light-box light2">Light 2<br><small>Fill Light</small></div>
-                <div class="light-box light3">Light 3<br><small>Back Light</small></div>
-            </div>
-
-            <table class="settings-table">
-                <tr>
-                    <th>Light</th>
-                    <th>Purpose</th>
-                    <th>Effect</th>
-                </tr>
-                <tr>
-                    <td><strong>Light 1</strong> (Key Light)</td>
-                    <td>Primary light source</td>
-                    <td>Creates main shadows and highlights. This is your main light — always keep it ON for visible 3D text.</td>
-                </tr>
-                <tr>
-                    <td><strong>Light 2</strong> (Fill Light)</td>
-                    <td>Secondary light source</td>
-                    <td>Softens shadows created by Light 1. Adds dimension and makes text look less flat.</td>
-                </tr>
-                <tr>
-                    <td><strong>Light 3</strong> (Back/Accent Light)</td>
-                    <td>Accent/rim light</td>
-                    <td>Adds highlights around edges. Creates a "glow" effect and separates text from background. Use sparingly.</td>
-                </tr>
-            </table>
-
-            <div class="tip">
-                <div class="tip-title">Lighting Tips</div>
-                <p style="margin: 0;"><strong>For most designs:</strong> Keep Light 1 and Light 2 ON, Light 3 OFF<br>
-                <strong>For dramatic effect:</strong> Light 1 ON only<br>
-                <strong>For soft, even lighting:</strong> All three lights ON<br>
-                <strong>For metallic look:</strong> Enable "Metal Material" toggle</p>
-            </div>
+            <h3>Lighting</h3>
+            <p>The template includes three light sources (Light 1, Light 2, Light 3) that add depth and dimension to your 3D text. Toggle them on or off to achieve different visual effects. More lights = more depth and highlights on your text.</p>
 
             <h3>3D Text Settings</h3>
             <table class="settings-table">
@@ -773,11 +701,12 @@
 
             <div class="warning">
                 <div class="warning-title">Text Not Fitting on Screen?</div>
-                <p style="margin: 0;">If your 3D text is too large, reduce the <strong>3D Title Size</strong>:<br><br>
-                <strong>Recommended sizes:</strong><br>
-                • Short words (1-5 letters): 48-60<br>
-                • Medium text (6-10 letters): 36-48<br>
-                • Longer text (10+ letters): 24-36</p>
+                <p style="margin: 0;">If your 3D text is too large and doesn't fit properly, simply reduce the <strong>3D Title Size</strong> in Design settings until it looks right.</p>
+            </div>
+
+            <div class="tip">
+                <div class="tip-title">Mobile Size</div>
+                <p style="margin: 0;">On mobile devices, the 3D text size is automatically set to <strong>14</strong> and cannot be changed. This ensures optimal performance and readability on smaller screens, as 3D rendering is resource-intensive on mobile devices.</p>
             </div>
         </div>
 
@@ -794,12 +723,14 @@
                 <li>Paste it into the <strong>Image Link</strong> field in the gallery settings</li>
             </ol>
 
-            <p>The URL format should look like this:</p>
+            <p>You can use either the <strong>full URL</strong> or <strong>relative path</strong>:</p>
             <div class="example-url">https://your-store.company.site/products/product-name</div>
+            <p style="margin-top: 8px; margin-bottom: 0;">or just:</p>
+            <div class="example-url">/products/product-name</div>
 
             <div class="tip">
                 <div class="tip-title">Quick Tip</div>
-                <p style="margin: 0;">You can link to collection pages, external websites, or any URL. Just paste the full URL including <code>https://</code></p>
+                <p style="margin: 0;">Both formats work! Use relative paths (<code>/products/...</code>) for links within your store, or full URLs for external websites.</p>
             </div>
 
             <h3>Image Settings</h3>
@@ -863,7 +794,10 @@
                 <li>Paste it into the <strong>Collection URL</strong> field</li>
             </ol>
 
+            <p>You can use either the <strong>full URL</strong> or <strong>relative path</strong>:</p>
             <div class="example-url">https://your-store.company.site/products/collection-name</div>
+            <p style="margin-top: 8px; margin-bottom: 0;">or just:</p>
+            <div class="example-url">/products/collection-name</div>
 
             <h3>Collection Card Settings</h3>
             <table class="settings-table">
@@ -1105,19 +1039,15 @@
                 <div class="accordion-item">
                     <div class="accordion-header">3D text is too large / doesn't fit on screen</div>
                     <div class="accordion-content">
-                        <p><strong>Solution:</strong> Reduce the <strong>3D Title Size</strong> in Design settings.</p>
-                        <ul>
-                            <li>Short words (1-5 letters): 48-60</li>
-                            <li>Medium text (6-10 letters): 36-48</li>
-                            <li>Longer text (10+ letters): 24-36</li>
-                        </ul>
+                        <p><strong>Solution:</strong> Reduce the <strong>3D Title Size</strong> in Design settings until it fits properly.</p>
+                        <p><strong>Note:</strong> On mobile devices, the size is fixed at 14 for performance reasons and cannot be changed.</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">3D text looks flat / no depth</div>
                     <div class="accordion-content">
-                        <p><strong>Solution:</strong> Make sure at least Light 1 and Light 2 are enabled. Try enabling "Metal Material" for more visible depth.</p>
+                        <p><strong>Solution:</strong> Enable more lights (Light 1, Light 2, Light 3) to add depth. You can also try enabling "Metal Material" for a more visible 3D effect.</p>
                     </div>
                 </div>
 
@@ -1137,7 +1067,12 @@
                 <div class="accordion-item">
                     <div class="accordion-header">Product links not working</div>
                     <div class="accordion-content">
-                        <p><strong>Solution:</strong> Make sure the URL includes <code>https://</code> at the beginning. Copy the full URL from your browser when viewing the product.</p>
+                        <p><strong>Solution:</strong> You can use either format:</p>
+                        <ul>
+                            <li>Full URL: <code>https://your-store.company.site/products/product-name</code></li>
+                            <li>Relative path: <code>/products/product-name</code></li>
+                        </ul>
+                        <p>Copy the URL from your browser when viewing the product page.</p>
                     </div>
                 </div>
 
