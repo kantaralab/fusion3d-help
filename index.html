@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion 3D Template - Help Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f9f9f9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 32px 0 16px;
+            color: #333;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: #444;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #444;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .tip {
+            background: #f0f7ff;
+            border-left: 4px solid #3b82f6;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .tip-title {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+
+        .warning {
+            background: #fff7ed;
+            border-left: 4px solid #f59e0b;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .warning-title {
+            font-weight: 600;
+            color: #b45309;
+            margin-bottom: 8px;
+        }
+
+        .error {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .error-title {
+            font-weight: 600;
+            color: #b91c1c;
+            margin-bottom: 8px;
+        }
+
+        .success {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .success-title {
+            font-weight: 600;
+            color: #15803d;
+            margin-bottom: 8px;
+        }
+
+        .font-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .font-item {
+            background: #f5f5f5;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .font-item.best {
+            background: #ecfdf5;
+            border: 2px solid #10b981;
+            color: #047857;
+            font-weight: 600;
+        }
+
+        .font-item.recommended {
+            background: #f0fdf4;
+            border: 1px solid #22c55e;
+            color: #166534;
+        }
+
+        .font-item.works {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+        }
+
+        .steps {
+            counter-reset: step;
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        .steps li {
+            counter-increment: step;
+            padding: 16px 16px 16px 60px;
+            position: relative;
+            margin-bottom: 12px;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+
+        .steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            background: #1a1a1a;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        code {
+            background: #f1f1f1;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'DM Mono', monospace;
+            font-size: 14px;
+        }
+
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .link-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f0f7ff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 12px 0;
+        }
+
+        .link-box svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .example-url {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 16px 20px;
+            border-radius: 8px;
+            font-family: 'DM Mono', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        .toc {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc li {
+            margin-bottom: 12px;
+        }
+
+        .toc a {
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc a:hover {
+            color: #3b82f6;
+        }
+
+        .toc-number {
+            background: #f5f5f5;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .settings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .settings-table th,
+        .settings-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .settings-table th {
+            background: #f9f9f9;
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-toggle {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-select {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .badge-input {
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+
+        .badge-image {
+            background: #fce7f3;
+            color: #9d174d;
+        }
+
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin: 16px 0;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .legend-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .legend-box.best {
+            background: #ecfdf5;
+            border: 2px solid #10b981;
+        }
+
+        .legend-box.recommended {
+            background: #f0fdf4;
+            border: 1px solid #22c55e;
+        }
+
+        .legend-box.works {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+        }
+
+        .quick-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .quick-nav-item {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .quick-nav-item:hover {
+            background: #eee;
+            transform: translateY(-2px);
+        }
+
+        .quick-nav-item h4 {
+            margin: 0 0 8px;
+            color: #333;
+        }
+
+        .quick-nav-item p {
+            margin: 0;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .accordion {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #eee;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-header {
+            padding: 16px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion-header:hover {
+            background: #f9f9f9;
+        }
+
+        .accordion-content {
+            padding: 0 20px 16px;
+            display: none;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+
+        .accordion-item.active .accordion-header::after {
+            transform: rotate(180deg);
+        }
+
+        .accordion-header::after {
+            content: "▼";
+            font-size: 10px;
+            transition: transform 0.2s;
+        }
+
+        .visual-example {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        .visual-example img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .light-demo {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .light-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .light-box.light1 {
+            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            box-shadow: -10px -10px 30px #fff, 10px 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .light-box.light2 {
+            background: linear-gradient(225deg, #fff 0%, #e8e8e8 100%);
+            box-shadow: 10px -10px 30px rgba(255,255,255,0.8), -10px 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .light-box.light3 {
+            background: linear-gradient(45deg, #fafafa 0%, #e0e0e0 100%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 16px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .section {
+                padding: 24px;
+            }
+
+            .font-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .settings-table {
+                font-size: 14px;
+            }
+
+            .settings-table th,
+            .settings-table td {
+                padding: 10px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fusion 3D</h1>
+            <p class="subtitle">Help Center & Knowledge Base</p>
+        </header>
+
+        <!-- Quick Navigation -->
+        <div class="section">
+            <h2>Quick Help</h2>
+            <div class="quick-nav">
+                <a href="#hero" class="quick-nav-item" style="text-decoration: none;">
+                    <h4>3D Text Not Working?</h4>
+                    <p>Check supported fonts</p>
+                </a>
+                <a href="#location" class="quick-nav-item" style="text-decoration: none;">
+                    <h4>Map Not Showing?</h4>
+                    <p>Get coordinates from Google Maps</p>
+                </a>
+                <a href="#troubleshooting" class="quick-nav-item" style="text-decoration: none;">
+                    <h4>Common Issues</h4>
+                    <p>Solutions to frequent problems</p>
+                </a>
+                <a href="#gallery" class="quick-nav-item" style="text-decoration: none;">
+                    <h4>Product Links</h4>
+                    <p>How to link images to products</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#about"><span class="toc-number">1</span> About Fusion 3D Template</a></li>
+                <li><a href="#hero"><span class="toc-number">2</span> Hero Section (3D Text)</a></li>
+                <li><a href="#gallery"><span class="toc-number">3</span> Product Gallery</a></li>
+                <li><a href="#collections"><span class="toc-number">4</span> Collections</a></li>
+                <li><a href="#reviews"><span class="toc-number">5</span> Reviews Section</a></li>
+                <li><a href="#delivery"><span class="toc-number">6</span> Delivery Section</a></li>
+                <li><a href="#location"><span class="toc-number">7</span> Location & Map</a></li>
+                <li><a href="#footer"><span class="toc-number">8</span> Footer</a></li>
+                <li><a href="#troubleshooting"><span class="toc-number">9</span> Troubleshooting</a></li>
+            </ul>
+        </div>
+
+        <!-- About Section -->
+        <div class="section" id="about">
+            <h2>1. About Fusion 3D Template</h2>
+            <p>Fusion 3D is a premium e-commerce template featuring stunning 3D text effects, smooth animations, and a modern minimalist design. Perfect for fashion brands, design studios, art galleries, and premium product showcases.</p>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Interactive 3D text</strong> — Hero section with customizable 3D fonts and lighting</li>
+                <li><strong>Dynamic lighting</strong> — Three light sources for depth and dimension</li>
+                <li><strong>Smooth animations</strong> — Float and wave effects with speed control</li>
+                <li><strong>Interactive map</strong> — Show multiple store locations with Google Maps</li>
+                <li><strong>Product gallery</strong> — Beautiful grid layouts with hover effects</li>
+                <li><strong>Collections</strong> — 3D flip-card hover effects</li>
+                <li><strong>Reviews carousel</strong> — Customer testimonials with auto-scroll</li>
+                <li><strong>Fully responsive</strong> — Works on all devices</li>
+            </ul>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="section" id="hero">
+            <h2>2. Hero Section (3D Text)</h2>
+            <p>The hero section features a stunning 3D text effect that responds to user interaction. You can customize the font, size, colors, lighting, and animations.</p>
+
+            <h3>Supported 3D Fonts</h3>
+            <p>The 3D text uses special font files optimized for 3D rendering. <strong>Not all fonts in the editor work with 3D!</strong> Here are the fonts that are currently supported:</p>
+
+            <div class="warning">
+                <div class="warning-title">Important: Font Compatibility</div>
+                <p style="margin: 0;">While you can see many fonts in the editor dropdown, only the fonts listed below will render correctly as 3D text. Selecting unsupported fonts may result in text not displaying or appearing incorrectly.</p>
+            </div>
+
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-box best"></div>
+                    <span>Best for 3D (Highly Recommended)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box recommended"></div>
+                    <span>Recommended</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-box works"></div>
+                    <span>Supported</span>
+                </div>
+            </div>
+
+            <h4>Display & Script Fonts (Best for short titles)</h4>
+            <div class="font-grid">
+                <div class="font-item best">Smooch</div>
+                <div class="font-item best">Luckiest Guy</div>
+                <div class="font-item best">Grandstander</div>
+                <div class="font-item recommended">Anton</div>
+                <div class="font-item recommended">Krona One</div>
+                <div class="font-item recommended">Yeseva One</div>
+            </div>
+
+            <h4>Sans-Serif Fonts (Clean & Modern)</h4>
+            <div class="font-grid">
+                <div class="font-item recommended">Quicksand</div>
+                <div class="font-item recommended">Raleway</div>
+                <div class="font-item recommended">Josefin Sans</div>
+                <div class="font-item works">Alice</div>
+                <div class="font-item works">Roboto Condensed</div>
+                <div class="font-item works">Roboto Slab</div>
+                <div class="font-item works">Rubik</div>
+                <div class="font-item works">Fira Sans Extra Condensed</div>
+                <div class="font-item works">Average Sans</div>
+            </div>
+
+            <h4>Serif Fonts (Elegant & Classic)</h4>
+            <div class="font-grid">
+                <div class="font-item recommended">Spectral</div>
+                <div class="font-item recommended">Cormorant Garamond</div>
+                <div class="font-item recommended">DM Serif Text</div>
+                <div class="font-item works">Alegreya</div>
+                <div class="font-item works">Quattrocento</div>
+                <div class="font-item works">Questrial</div>
+                <div class="font-item works">Standard</div>
+                <div class="font-item works">Adamina</div>
+                <div class="font-item works">Inknut Antiqua</div>
+                <div class="font-item works">Instrument Serif</div>
+            </div>
+
+            <div class="tip">
+                <div class="tip-title">Best Choices for 3D Text</div>
+                <p style="margin: 0;"><strong>Smooch</strong> — Perfect for elegant, cursive titles<br>
+                <strong>Luckiest Guy</strong> — Fun, bold headlines<br>
+                <strong>Grandstander</strong> — Playful, rounded style<br>
+                <strong>Anton</strong> — Bold, impactful headlines<br>
+                <strong>Quicksand</strong> — Modern, clean appearance</p>
+            </div>
+
+            <h3>Understanding Lights</h3>
+            <p>The 3D text uses a <strong>three-point lighting system</strong> to create depth and dimension. This is similar to how photographers and filmmakers light their subjects:</p>
+
+            <div class="light-demo">
+                <div class="light-box light1">Light 1<br><small>Key Light</small></div>
+                <div class="light-box light2">Light 2<br><small>Fill Light</small></div>
+                <div class="light-box light3">Light 3<br><small>Back Light</small></div>
+            </div>
+
+            <table class="settings-table">
+                <tr>
+                    <th>Light</th>
+                    <th>Purpose</th>
+                    <th>Effect</th>
+                </tr>
+                <tr>
+                    <td><strong>Light 1</strong> (Key Light)</td>
+                    <td>Primary light source</td>
+                    <td>Creates main shadows and highlights. This is your main light — always keep it ON for visible 3D text.</td>
+                </tr>
+                <tr>
+                    <td><strong>Light 2</strong> (Fill Light)</td>
+                    <td>Secondary light source</td>
+                    <td>Softens shadows created by Light 1. Adds dimension and makes text look less flat.</td>
+                </tr>
+                <tr>
+                    <td><strong>Light 3</strong> (Back/Accent Light)</td>
+                    <td>Accent/rim light</td>
+                    <td>Adds highlights around edges. Creates a "glow" effect and separates text from background. Use sparingly.</td>
+                </tr>
+            </table>
+
+            <div class="tip">
+                <div class="tip-title">Lighting Tips</div>
+                <p style="margin: 0;"><strong>For most designs:</strong> Keep Light 1 and Light 2 ON, Light 3 OFF<br>
+                <strong>For dramatic effect:</strong> Light 1 ON only<br>
+                <strong>For soft, even lighting:</strong> All three lights ON<br>
+                <strong>For metallic look:</strong> Enable "Metal Material" toggle</p>
+            </div>
+
+            <h3>3D Text Settings</h3>
+            <table class="settings-table">
+                <tr>
+                    <th>Setting</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>3D Title</td>
+                    <td><span class="badge badge-input">Text</span></td>
+                    <td>The text that will be rendered in 3D</td>
+                </tr>
+                <tr>
+                    <td>3D Title Size</td>
+                    <td><span class="badge badge-select">Range</span></td>
+                    <td>Font size (12-60px). Reduce if text doesn't fit on screen.</td>
+                </tr>
+                <tr>
+                    <td>Font</td>
+                    <td><span class="badge badge-select">Select</span></td>
+                    <td>Choose from supported 3D fonts (see list above)</td>
+                </tr>
+                <tr>
+                    <td>Light 1</td>
+                    <td><span class="badge badge-toggle">Toggle</span></td>
+                    <td>Primary light source — keep enabled</td>
+                </tr>
+                <tr>
+                    <td>Light 2</td>
+                    <td><span class="badge badge-toggle">Toggle</span></td>
+                    <td>Fill light for softer shadows</td>
+                </tr>
+                <tr>
+                    <td>Light 3</td>
+                    <td><span class="badge badge-toggle">Toggle</span></td>
+                    <td>Accent light for edge highlights</td>
+                </tr>
+                <tr>
+                    <td>Metal Material</td>
+                    <td><span class="badge badge-toggle">Toggle</span></td>
+                    <td>Makes text look metallic and reflective</td>
+                </tr>
+                <tr>
+                    <td>3D Animation</td>
+                    <td><span class="badge badge-toggle">Toggle</span></td>
+                    <td>Enable/disable animation effect</td>
+                </tr>
+                <tr>
+                    <td>Animation Type</td>
+                    <td><span class="badge badge-select">Select</span></td>
+                    <td><strong>Float</strong> — gentle bobbing<br><strong>Wave</strong> — wave-like rotation</td>
+                </tr>
+                <tr>
+                    <td>Animation Speed</td>
+                    <td><span class="badge badge-select">Select</span></td>
+                    <td>Slow (0.5x), Normal (1x), Fast (2x)</td>
+                </tr>
+            </table>
+
+            <div class="warning">
+                <div class="warning-title">Text Not Fitting on Screen?</div>
+                <p style="margin: 0;">If your 3D text is too large, reduce the <strong>3D Title Size</strong>:<br><br>
+                <strong>Recommended sizes:</strong><br>
+                • Short words (1-5 letters): 48-60<br>
+                • Medium text (6-10 letters): 36-48<br>
+                • Longer text (10+ letters): 24-36</p>
+            </div>
+        </div>
+
+        <!-- Product Gallery -->
+        <div class="section" id="gallery">
+            <h2>3. Product Gallery</h2>
+            <p>The product gallery showcases your products with beautiful hover effects. You can add up to 8 images and link each to a product page.</p>
+
+            <h3>How to Get Product Links</h3>
+            <ol class="steps">
+                <li>Go to your Ecwid admin panel → <strong>Catalog → Products</strong></li>
+                <li>Click on the product you want to link</li>
+                <li>Copy the URL from your browser's address bar</li>
+                <li>Paste it into the <strong>Image Link</strong> field in the gallery settings</li>
+            </ol>
+
+            <p>The URL format should look like this:</p>
+            <div class="example-url">https://your-store.company.site/products/product-name</div>
+
+            <div class="tip">
+                <div class="tip-title">Quick Tip</div>
+                <p style="margin: 0;">You can link to collection pages, external websites, or any URL. Just paste the full URL including <code>https://</code></p>
+            </div>
+
+            <h3>Image Settings</h3>
+            <table class="settings-table">
+                <tr>
+                    <th>Setting</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Image</td>
+                    <td><span class="badge badge-image">Image</span></td>
+                    <td>Upload or select a product image</td>
+                </tr>
+                <tr>
+                    <td>Image Text</td>
+                    <td><span class="badge badge-input">Text</span></td>
+                    <td>Text overlay (product name)</td>
+                </tr>
+                <tr>
+                    <td>Image Link</td>
+                    <td><span class="badge badge-input">URL</span></td>
+                    <td>URL when clicked</td>
+                </tr>
+                <tr>
+                    <td>Text Position</td>
+                    <td><span class="badge badge-select">Select</span></td>
+                    <td>Top or Bottom of image</td>
+                </tr>
+                <tr>
+                    <td>Text Align</td>
+                    <td><span class="badge badge-select">Select</span></td>
+                    <td>Left, Center, or Right</td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><span class="badge badge-input">Text</span></td>
+                    <td>Optional price display</td>
+                </tr>
+            </table>
+
+            <h3>Gallery Layouts</h3>
+            <p>Choose from 10 different masonry layouts to display your products:</p>
+            <ul>
+                <li><strong>Layout 1:</strong> Large left column with mixed right</li>
+                <li><strong>Layout 2:</strong> Three-column balanced</li>
+                <li><strong>Layout 3-10:</strong> Various asymmetric patterns</li>
+            </ul>
+        </div>
+
+        <!-- Collections -->
+        <div class="section" id="collections">
+            <h2>4. Collections</h2>
+            <p>Display your product collections with a 3D flip-card hover effect. You can add up to 8 collection cards.</p>
+
+            <h3>How to Get Collection Links</h3>
+            <ol class="steps">
+                <li>Go to your Ecwid admin panel → <strong>Catalog → Categories</strong></li>
+                <li>Click on the category/collection</li>
+                <li>Copy the URL from your browser's address bar</li>
+                <li>Paste it into the <strong>Collection URL</strong> field</li>
+            </ol>
+
+            <div class="example-url">https://your-store.company.site/products/collection-name</div>
+
+            <h3>Collection Card Settings</h3>
+            <table class="settings-table">
+                <tr>
+                    <th>Setting</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Collection Title</td>
+                    <td>Name of your collection (e.g., "Summer Collection")</td>
+                </tr>
+                <tr>
+                    <td>Collection Description</td>
+                    <td>Brief description that appears on hover</td>
+                </tr>
+                <tr>
+                    <td>Collection URL</td>
+                    <td>Link to the collection page</td>
+                </tr>
+                <tr>
+                    <td>Collection Image</td>
+                    <td>Background image for the card</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Reviews -->
+        <div class="section" id="reviews">
+            <h2>5. Reviews Section</h2>
+            <p>Display customer testimonials in a beautiful carousel. You can add up to 5 reviews.</p>
+
+            <h3>Review Settings</h3>
+            <table class="settings-table">
+                <tr>
+                    <th>Setting</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Section Title</td>
+                    <td>Main heading (e.g., "What Our Customers Say")</td>
+                </tr>
+                <tr>
+                    <td>Section Subtitle</td>
+                    <td>Subheading text</td>
+                </tr>
+                <tr>
+                    <td>Review Text</td>
+                    <td>The testimonial content</td>
+                </tr>
+                <tr>
+                    <td>Author Name</td>
+                    <td>Customer's name</td>
+                </tr>
+                <tr>
+                    <td>Author Role</td>
+                    <td>Their title (e.g., "CEO", "Designer")</td>
+                </tr>
+                <tr>
+                    <td>Company</td>
+                    <td>Company name (optional)</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Delivery -->
+        <div class="section" id="delivery">
+            <h2>6. Delivery Section</h2>
+            <p>Showcase your delivery information with a featured image and text.</p>
+
+            <h3>Delivery Settings</h3>
+            <table class="settings-table">
+                <tr>
+                    <th>Setting</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Section Title</td>
+                    <td>Main heading (e.g., "Free Worldwide Delivery")</td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td>Primary delivery info text</td>
+                </tr>
+                <tr>
+                    <td>Description 2</td>
+                    <td>Secondary text (bold style)</td>
+                </tr>
+                <tr>
+                    <td>Image</td>
+                    <td>Featured image or graphic</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Location Section -->
+        <div class="section" id="location">
+            <h2>7. Location & Map</h2>
+            <p>Display an interactive map with your store locations. Visitors can see details and get directions.</p>
+
+            <h3>How to Get Coordinates from Google Maps</h3>
+            <p>Each location needs GPS coordinates. Here's how to get them:</p>
+
+            <ol class="steps">
+                <li>Open <a href="https://www.google.com/maps" target="_blank">Google Maps</a> in your browser</li>
+                <li>Search for your store address or navigate to the exact location</li>
+                <li><strong>Right-click</strong> directly on the location on the map</li>
+                <li>Click on the coordinates that appear at the top of the menu — they will be copied automatically</li>
+                <li>Paste the coordinates into the <strong>Coordinates</strong> field in the template settings</li>
+            </ol>
+
+            <a href="https://www.google.com/maps" target="_blank" class="link-box">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Open Google Maps
+            </a>
+
+            <div class="visual-example">
+                <p style="margin-bottom: 12px; font-weight: 500;">Example: Getting coordinates</p>
+                <p style="margin: 0; font-size: 14px; color: #666;">Right-click on the map → Click the coordinates (e.g., <code>40.7484, -73.9857</code>)</p>
+            </div>
+
+            <div class="tip">
+                <div class="tip-title">Coordinates Format</div>
+                <p style="margin: 0;">Coordinates should be in decimal format: <code>latitude, longitude</code><br><br>
+                <strong>Examples:</strong><br>
+                • New York: <code>40.7128, -74.0060</code><br>
+                • London: <code>51.5074, -0.1278</code><br>
+                • Paris: <code>48.8566, 2.3522</code><br>
+                • Tokyo: <code>35.6762, 139.6503</code><br>
+                • Sydney: <code>-33.8688, 151.2093</code></p>
+            </div>
+
+            <h3>Location Settings</h3>
+            <table class="settings-table">
+                <tr>
+                    <th>Setting</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Default Map Location</td>
+                    <td><span class="badge badge-input">Text</span></td>
+                    <td>Initial center point of the map (coordinates)</td>
+                </tr>
+                <tr>
+                    <td>Map Zoom</td>
+                    <td><span class="badge badge-select">Select</span></td>
+                    <td><strong>Far</strong> — Wide area view<br>
+                        <strong>Normal</strong> — Balanced view<br>
+                        <strong>Close</strong> — Street level<br>
+                        <strong>Very Close</strong> — Building detail</td>
+                </tr>
+                <tr>
+                    <td>Location Name</td>
+                    <td><span class="badge badge-input">Text</span></td>
+                    <td>Store name (e.g., "Tokyo Flagship")</td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><span class="badge badge-input">Text</span></td>
+                    <td>Full street address</td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td><span class="badge badge-input">Text</span></td>
+                    <td>Contact phone number</td>
+                </tr>
+                <tr>
+                    <td>Coordinates</td>
+                    <td><span class="badge badge-input">Text</span></td>
+                    <td>GPS coordinates (latitude, longitude)</td>
+                </tr>
+            </table>
+
+            <div class="warning">
+                <div class="warning-title">Map Not Showing?</div>
+                <p style="margin: 0;">If the map doesn't display:<br><br>
+                1. Make sure coordinates are in correct format: <code>40.7128, -74.0060</code><br>
+                2. Don't include degree symbols or letters (°, N, S, E, W)<br>
+                3. Use a decimal point, not a comma, for decimal places<br>
+                4. Latitude comes first, then longitude</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="section" id="footer">
+            <h2>8. Footer</h2>
+            <p>Customize your footer with brand info, navigation links, and social media.</p>
+
+            <h3>Footer Settings</h3>
+            <table class="settings-table">
+                <tr>
+                    <th>Setting</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Brand Name</td>
+                    <td>Your company/store name</td>
+                </tr>
+                <tr>
+                    <td>Brand Description</td>
+                    <td>Short tagline or description</td>
+                </tr>
+                <tr>
+                    <td>Column 1-3 Title</td>
+                    <td>Section headers (e.g., "Shop", "Support", "Company")</td>
+                </tr>
+                <tr>
+                    <td>Column Links</td>
+                    <td>Up to 6 links per column with text and URL</td>
+                </tr>
+                <tr>
+                    <td>Social Links</td>
+                    <td>Up to 6 social media links</td>
+                </tr>
+                <tr>
+                    <td>Copyright Text</td>
+                    <td>Copyright notice at bottom</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="section" id="troubleshooting">
+            <h2>9. Troubleshooting</h2>
+            <p>Solutions to common issues with the Fusion 3D template.</p>
+
+            <div class="accordion">
+                <div class="accordion-item active">
+                    <div class="accordion-header">3D text not displaying or looks broken</div>
+                    <div class="accordion-content">
+                        <p><strong>Cause:</strong> You're using an unsupported font.</p>
+                        <p><strong>Solution:</strong> Only use fonts from the <a href="#hero">supported fonts list</a>. Best options: Smooch, Luckiest Guy, Grandstander, Anton, Quicksand.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">3D text is too large / doesn't fit on screen</div>
+                    <div class="accordion-content">
+                        <p><strong>Solution:</strong> Reduce the <strong>3D Title Size</strong> in Design settings.</p>
+                        <ul>
+                            <li>Short words (1-5 letters): 48-60</li>
+                            <li>Medium text (6-10 letters): 36-48</li>
+                            <li>Longer text (10+ letters): 24-36</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">3D text looks flat / no depth</div>
+                    <div class="accordion-content">
+                        <p><strong>Solution:</strong> Make sure at least Light 1 and Light 2 are enabled. Try enabling "Metal Material" for more visible depth.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Map not showing / wrong location</div>
+                    <div class="accordion-content">
+                        <p><strong>Solution:</strong> Check your coordinates format:</p>
+                        <ul>
+                            <li>Use decimal format: <code>40.7128, -74.0060</code></li>
+                            <li>Latitude first, longitude second</li>
+                            <li>No degree symbols (°) or letters (N, S, E, W)</li>
+                            <li>Use period (.) for decimals, not comma</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Product links not working</div>
+                    <div class="accordion-content">
+                        <p><strong>Solution:</strong> Make sure the URL includes <code>https://</code> at the beginning. Copy the full URL from your browser when viewing the product.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Animation is too slow / too fast</div>
+                    <div class="accordion-content">
+                        <p><strong>Solution:</strong> Change the <strong>Animation Speed</strong> setting:</p>
+                        <ul>
+                            <li>Slow = 0.5x speed</li>
+                            <li>Normal = 1x speed</li>
+                            <li>Fast = 2x speed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">Images not loading in gallery</div>
+                    <div class="accordion-content">
+                        <p><strong>Solution:</strong> Make sure images are:</p>
+                        <ul>
+                            <li>In JPG, PNG, or WebP format</li>
+                            <li>Under 5MB file size</li>
+                            <li>Properly uploaded through the image picker</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success">
+                <div class="success-title">Need More Help?</div>
+                <p style="margin: 0;">If you can't find a solution to your problem, contact support through your Ecwid admin panel or visit the Ecwid Help Center.</p>
+            </div>
+        </div>
+
+        <footer style="text-align: center; padding: 40px 0; color: #999;">
+            <p>Fusion 3D Template &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all items
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
